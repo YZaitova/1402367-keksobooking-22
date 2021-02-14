@@ -11,7 +11,7 @@ let randomIntInclusive = function get(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
-console.log(randomIntInclusive(1, 45));
+randomIntInclusive(1, 45);
 
 let geographicalСoordinates = function(min, max, NumberOfSimbolsAfterComma) {
   if (min || max <= 0) {
@@ -26,5 +26,5 @@ let geographicalСoordinates = function(min, max, NumberOfSimbolsAfterComma) {
   randomNumber = +randomNumber.toFixed(NumberOfSimbolsAfterComma);
   return randomNumber;
 };
-console.log(geographicalСoordinates(5.5, 8.25, 3));
+geographicalСoordinates(5.5, 8.25, 3);
 
