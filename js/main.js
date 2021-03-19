@@ -1,5 +1,5 @@
 const checksRange = function (min, max) {
-  if (min || (max <= 0)) {
+  if ((min <= 0) || (max <= 0)) {
     return alert('Введен некорректный диапазон. Введите значения больше либо равное 0');
   }
 };
