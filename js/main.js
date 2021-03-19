@@ -34,48 +34,48 @@ let author = {
   avatar: 'img/avatars/user' + '0' + randomIntInclusive(1, 8) + '.png',
 };
 
-console.log(author);
+//console.log(author);
 const FEATURES = [
   'wifi',
   'dishwasher',
   'parking',
   'washer',
   'elevator',
-  'conditioner'
+  'conditioner',
 ];
 const TYPE = [
   'palace',
   'flat',
   'house',
-  'bungalow'
+  'bungalow',
 ];
 const CHECKIN = [
   '12:00',
   '13:00',
-  '14:00'
+  '14:00',
 ];
 const CHECKOUT = [
   '12:00',
   '13:00',
-  '14:00'
+  '14:00',
 ];
 
 const DESCRIPTION = ['Теплое',
-'Уютное',
-'С видом на море',
-'С видом во двор',
-'Есть балкон',
-'Можно с животными',
-'Курить нельзя',
-'Можно устраивать вечеринки',
-'Светлый ремонт',
-'Площадь 30 кв.м',
-'Есть телевизор',
+  'Уютное',
+  'С видом на море',
+  'С видом во двор',
+  'Есть балкон',
+  'Можно с животными',
+  'Курить нельзя',
+  'Можно устраивать вечеринки',
+  'Светлый ремонт',
+  'Площадь 30 кв.м',
+  'Есть телевизор',
 ];
 const PHOTOS = [
-'http://o0.github.io/assets/images/tokyo/hotel1.jpg',
-'http://o0.github.io/assets/images/tokyo/hotel2.jpg',
-'http://o0.github.io/assets/images/tokyo/hotel3.jpg',
+  'http://o0.github.io/assets/images/tokyo/hotel1.jpg',
+  'http://o0.github.io/assets/images/tokyo/hotel2.jpg',
+  'http://o0.github.io/assets/images/tokyo/hotel3.jpg',
 ]
 let createFeaturesArr = () => {
   let randomFeaturesIndex = randomIntInclusive(1, FEATURES.length - 1);
@@ -83,7 +83,7 @@ let createFeaturesArr = () => {
   let randomArr =  copyFEATURES.slice(randomFeaturesIndex);
   return randomArr;
 };
-console.log(createFeaturesArr());
+//console.log(createFeaturesArr());
 
 let createLocation = () => {
   return {
@@ -92,7 +92,7 @@ let createLocation = () => {
   }
 }
 let location = createLocation();
-console.log(location);
+//console.log(location);
 
 const createOffer = ()=> {
   let photosIndex = randomIntInclusive(1, PHOTOS.length -1);
@@ -125,9 +125,9 @@ let createAdvert = () => {
     offer,
   }
 }
-console.log(createAdvert());
+//console.log(createAdvert());
 
 let advertsArr = new Array(10);
 advertsArr[0] = createAdvert();
 advertsArr[1] = createAdvert();
-console.log(advertsArr); // не получилось сделать 10 разных объявлений(((
+//console.log(advertsArr); // не получилось сделать 10 разных объявлений(((
