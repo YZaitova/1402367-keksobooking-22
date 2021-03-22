@@ -91,8 +91,8 @@ let createLocation = () => {
     y: geographicalСoordinates(139.70000, 139.80000, 5),
   }
 }
-let location = createLocation();
-//console.log(location);
+let location1 = createLocation();
+//console.log(location1);
 
 const createOffer = ()=> {
   let photosIndex = randomIntInclusive(1, PHOTOS.length -1);
@@ -104,7 +104,7 @@ const createOffer = ()=> {
   let priceMax = 120000;
   return {
     title: 'Объявление о сдаче жилья',
-    address: location,
+    address: location1,
     price: randomIntInclusive(priceMin, priceMax, 0),
     type: TYPE[typeIndex],
     rooms: randomIntInclusive(1, 5, 0),
@@ -121,13 +121,17 @@ let offer = createOffer();
 let createAdvert = () => {
   return {
     author,
-    location,
+    location1,
     offer,
   }
 }
 //console.log(createAdvert());
+let countAdverts = 10;
+let advertsArr = new Array(countAdverts);
+console.log(advertsArr);
 
-let advertsArr = new Array(10);
-advertsArr[0] = createAdvert();
-advertsArr[1] = createAdvert();
-//console.log(advertsArr); // не получилось сделать 10 разных объявлений(((
+for (let i = 0; i <= advertsArr.length - 1; i++) {
+  advertsArr[i] = createAdvert();
+  return advertsArr;
+}
+console.log(advertsArr); // не получилось сделать 10 разных объявлений(((
