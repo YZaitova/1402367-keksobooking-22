@@ -105,10 +105,10 @@ const createOffer = ()=> {
   return {
     title: 'Объявление о сдаче жилья',
     address: location1,
-    price: randomIntInclusive(priceMin, priceMax, 0),
+    price: randomIntInclusive(priceMin, priceMax),
     type: TYPE[typeIndex],
-    rooms: randomIntInclusive(1, 5, 0),
-    guests: randomIntInclusive(1, 5, 0),
+    rooms: randomIntInclusive(1, 5),
+    guests: randomIntInclusive(1, 5),
     checkin: CHECKIN[checkinIndex],
     checkout: CHECKOUT[checkoutIndex],
     features: createFeaturesArr(),
@@ -128,10 +128,12 @@ let createAdvert = () => {
 //console.log(createAdvert());
 let countAdverts = 10;
 let advertsArr = new Array(countAdverts);
+advertsArr = advertsArr.fill(createAdvert())
 console.log(advertsArr);
 
-for (let i = 0; i <= advertsArr.length - 1; i++) {
-  advertsArr[i] = createAdvert();
-  return advertsArr;
-}
-console.log(advertsArr); // не получилось сделать 10 разных объявлений(((
+
+// for (let i = 0; i <= advertsArr.length - 1; i++) {
+//   advertsArr[i] = createAdvert();
+//   return advertsArr;
+// }
+// console.log(advertsArr); // не получилось сделать 10 разных объявлений(((
