@@ -1,4 +1,4 @@
-const {randomIntInclusive, geographicalСoordinates} = require('./util.js');
+import { randomIntInclusive, geographicalСoordinates } from './util.js';
 let author = {
   avatar: 'img/avatars/user' + '0' + randomIntInclusive(1, 8) + '.png',
 };
@@ -101,5 +101,5 @@ let advertsArr = new Array(countAdverts).fill(null).map(() => createAdvert());
 //   advertsArr[i] = createAdvert();
 //   return advertsArr;
 // }
-console.log(advertsArr);
-// module.exports = {advertsArr};
+//console.log(advertsArr);
+export {advertsArr};

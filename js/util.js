@@ -29,4 +29,4 @@ let geographicalСoordinates = function(min, max, NumberOfSimbolsAfterComma = '0
   return randomNumber;
 };
 geographicalСoordinates(5.5, 8.25, 3);
-module.exports = {randomIntInclusive, geographicalСoordinates};
+export {randomIntInclusive, geographicalСoordinates};

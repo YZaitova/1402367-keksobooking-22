@@ -1,2 +1,2 @@
-// import './util';
-// import './data';
+import './util';
+import './data';
